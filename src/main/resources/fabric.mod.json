@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "coordinatedcompass",
+	"version": "${version}",
+	"name": "Coordinated Compass",
+	"description": "makes the compass coordinated instead of clumsy. imagine if the compass was just a chill guy who lowkey doesn't give a fuck about anything",
+	"authors": [
+		"TheTrueYak"
+	],
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yak.coordinatedcompass.CoordinatedCompass"
+		]
+	},
+	"mixins": [
+		"coordinatedcompass.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
