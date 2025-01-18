@@ -1,0 +1,13 @@
+{
+  "message.coordinatedcompass.coordinates": "X: %d, Z: %d",
+  "message.coordinatedcompass.lodestone_coordinates": "Lodestone Position: X: %d, Z: %d",
+  "message.coordinatedcompass.biome": "Biome: ",
+  "message.coordinatedcompass.coordinates_biome": "X: %d, Z: %d, Biome: ",
+  "tooltip.coordinatedcompass.compass_tooltip": "§7[§6Right click§7] to display current coordinates",
+  "tooltip.coordinatedcompass.lodestone_compass_tooltip": "§7[§6Sneak§7] + [§6Right click§7] to display lodestone coordinates",
+  "tooltip.coordinatedcompass.recovery_compass_tooltip": "When in the inventory:",
+  "tooltip.coordinatedcompass.coordinates_enabled": "Display Coordinates: Enabled",
+  "tooltip.coordinatedcompass.coordinates_disabled": "Display Coordinates: Disabled",
+  "tooltip.coordinatedcompass.biome_enabled": "Display Biome: Enabled",
+  "tooltip.coordinatedcompass.biome_disabled": "Display Biome: Disabled"
+}

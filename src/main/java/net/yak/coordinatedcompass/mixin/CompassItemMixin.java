@@ -32,10 +32,10 @@ public abstract class CompassItemMixin extends Item {
 			if (user.getStackInHand(hand).contains(DataComponentTypes.LODESTONE_TRACKER) && user.getStackInHand(hand).get(DataComponentTypes.LODESTONE_TRACKER) != null
 					&& Objects.requireNonNull(user.getStackInHand(hand).get(DataComponentTypes.LODESTONE_TRACKER)).target().isPresent() && user.isSneaking()) {
 				BlockPos lodestonePosition = Objects.requireNonNull(user.getStackInHand(hand).get(DataComponentTypes.LODESTONE_TRACKER)).target().get().pos();
-				user.sendMessage(Text.literal("Lodestone Position: X: " + (int) lodestonePosition.getX() + ", Z: " + (int) lodestonePosition.getZ()), true);
+				user.sendMessage(Text.translatable("message.coordinatedcompass.lodestone_coordinates", (int) lodestonePosition.getX(), (int) lodestonePosition.getZ()), true);
 			}
 			else {
-				user.sendMessage(Text.literal("X: " + (int) user.getX() + ", Z: " + (int) user.getZ()), true);
+				user.sendMessage(Text.translatable("message.coordinatedcompass.coordinates", (int) user.getX(), (int) user.getZ()), true);
 			}
 			user.playSound(SoundEvents.ITEM_LODESTONE_COMPASS_LOCK, 0.7f, 0.8f);
 			user.swingHand(hand);
@@ -46,9 +46,9 @@ public abstract class CompassItemMixin extends Item {
 	@Environment(EnvType.CLIENT)
 	@Override
 	public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-		tooltip.add(Text.literal("§7[§6Right click§7] to display current coordinates"));
+		tooltip.add(Text.translatable("tooltip.coordinatedcompass.compass_tooltip"));
 		if (stack.contains(DataComponentTypes.LODESTONE_TRACKER)) {
-			tooltip.add(Text.literal("§7[§6Sneak§7] + [§6Right click§7] to display lodestone coordinates"));
+			tooltip.add(Text.translatable("tooltip.coordinatedcompass.lodestone_compass_tooltip"));
 		}
 		super.appendTooltip(stack, context, tooltip, type);
 	}

@@ -3,15 +3,19 @@
 	"id": "coordinatedcompass",
 	"version": "${version}",
 	"name": "Coordinated Compass",
-	"description": "makes the compass coordinated instead of clumsy. imagine if the compass was just a chill guy who lowkey doesn't give a fuck about anything",
+	"description": "makes the compass coordinated instead of clumsy. makes compasses more useful by allowing them to show coordinates and stuff",
 	"authors": [
 		"TheTrueYak"
 	],
 	"license": "CC0-1.0",
+	"icon": "assets/coordinatedcompass/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.yak.coordinatedcompass.CoordinatedCompass"
+		],
+		"client": [
+			"net.yak.coordinatedcompass.CoordinatedCompassClient"
 		]
 	},
 	"mixins": [
