@@ -16,7 +16,7 @@ import java.util.function.Consumer;
 
 public record RecoveryCompassComponent(int cycle) implements TooltipAppender  {
     public static final Codec<RecoveryCompassComponent> CODEC = RecordCodecBuilder.create((instance) -> {
-        return instance.group(Codec.INT.optionalFieldOf("cycle", 0).forGetter(RecoveryCompassComponent::cycle)).apply(instance, RecoveryCompassComponent::new);
+        return instance.group(Codec.INT.optionalFieldOf("cycle", -1).forGetter(RecoveryCompassComponent::cycle)).apply(instance, RecoveryCompassComponent::new);
     });
     public static final PacketCodec<ByteBuf, RecoveryCompassComponent> PACKET_CODEC = PacketCodecs.INTEGER.xmap(RecoveryCompassComponent::new, RecoveryCompassComponent::cycle);
     private static final Text RECOVERY_COMPASS_TOOLTIP = Text.translatable("tooltip.coordinatedcompass.recovery_compass_tooltip").formatted(Formatting.AQUA);

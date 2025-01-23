@@ -33,7 +33,7 @@ public class CoordinatedCompass implements ModInitializer {
 
 		DefaultItemComponentEvents.MODIFY.register(context -> context.modify( // yayyyy default components
 				Predicate.isEqual(Items.RECOVERY_COMPASS),
-				(builder, item) -> builder.add(RECOVERY_COMPASS_CYCLE, new RecoveryCompassComponent(0))
+				(builder, item) -> builder.add(RECOVERY_COMPASS_CYCLE, new RecoveryCompassComponent(-1))
 		));
 
 	}

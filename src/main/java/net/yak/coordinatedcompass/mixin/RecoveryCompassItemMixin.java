@@ -99,7 +99,7 @@ public abstract class RecoveryCompassItemMixin implements ToggleableFeature, Ite
                         tooltip.add(Text.translatable("tooltip.coordinatedcompass.biome_disabled").setStyle(Style.EMPTY.withColor(0x326569)));
                     }
                 }
-                if (MinecraftClient.getInstance().cameraEntity instanceof PlayerEntity user && user.getWorld().isClient()) {
+                if (MinecraftClient.getInstance().cameraEntity instanceof PlayerEntity user && user.getWorld().isClient() && value != -1) { // -1 is the default value, but it will never be -1 again after any interraction
                     tooltip.add(Text.translatable("message.coordinatedcompass.coordinates", (int) user.getX(), (int) user.getZ()).formatted(Formatting.AQUA));
                 }
             }
